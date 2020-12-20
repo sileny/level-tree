@@ -66,9 +66,9 @@
 </template>
 
 <script type="text/jsx">
-  import AElCollapseTransition from 'element-ui/src/transitions/collapse-transition';
-  import AElCheckbox from 'element-ui/packages/checkbox';
-  import emitter from 'element-ui/src/mixins/emitter';
+  import AElCollapseTransition from '@silen/level-tree/src/transitions/collapse-transition';
+  import AElCheckbox from '@silen/level-tree/packages/checkbox';
+  import emitter from '@silen/level-tree/src/mixins/emitter';
   import { getNodeKey } from './model/util';
 
   export default {

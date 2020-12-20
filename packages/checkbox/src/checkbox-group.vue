@@ -1,5 +1,5 @@
 <script>
-  import Emitter from 'element-ui/src/mixins/emitter';
+  import Emitter from '@silen/level-tree/src/mixins/emitter';
 
   export default {
     name: 'AElCheckboxGroup',

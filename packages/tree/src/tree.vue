@@ -36,9 +36,9 @@
   import TreeStore from './model/tree-store';
   import { getNodeKey, findNearestComponent } from './model/util';
   import AElTreeNode from './tree-node.vue';
-  import {t} from 'element-ui/src/locale';
-  import emitter from 'element-ui/src/mixins/emitter';
-  import { addClass, removeClass } from 'element-ui/src/utils/dom';
+  import {t} from '@silen/level-tree/src/locale';
+  import emitter from '@silen/level-tree/src/mixins/emitter';
+  import { addClass, removeClass } from '@silen/level-tree/src/utils/dom';
 
   export default {
     name: 'AElTree',

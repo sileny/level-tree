@@ -1,4 +1,4 @@
-import { t } from 'element-ui/src/locale';
+import { t } from '@silen/level-tree/src/locale';
 
 export default {
   methods: {
