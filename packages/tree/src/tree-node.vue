@@ -43,7 +43,7 @@
       </span>
       <node-content :node="node"></node-content>
     </div>
-    <el-collapse-transition>
+    <a-el-collapse-transition>
       <div
         class="el-tree-node__children"
         v-if="!renderAfterExpand || childNodeRendered"
@@ -61,7 +61,7 @@
           @node-expand="handleChildNodeExpand">
         </a-el-tree-node>
       </div>
-    </el-collapse-transition>
+    </a-el-collapse-transition>
   </div>
 </template>
 
