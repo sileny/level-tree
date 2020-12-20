@@ -45,7 +45,7 @@
     </div>
     <a-el-collapse-transition>
       <div
-        class="el-tree-node__children"
+        class="a-el-tree-node__children"
         v-if="!renderAfterExpand || childNodeRendered"
         v-show="expanded"
         role="group"
