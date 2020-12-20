@@ -324,7 +324,6 @@
     },
 
     created() {
-      console.log(this.inline, 325);
       this.isTree = true;
 
       this.store = new TreeStore({

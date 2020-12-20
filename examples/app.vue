@@ -14,6 +14,9 @@
         <span>{{ node.label }}</span>
       </span>
     </a-el-tree>
+    <a-el-checkbox
+      v-model="checked"
+    >a123</a-el-checkbox>
   </div>
 </template>
 
@@ -471,6 +474,7 @@
     label: 'App',
     data() {
       return {
+        checked: true,
         children: [],
         defaultCheckedKeys: [],
         treeList: []
