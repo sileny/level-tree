@@ -1,7 +1,7 @@
 import { ElementUIComponent, ElementUIComponentSize } from './component'
 
 /** Checkbox Component */
-export declare class ElCheckbox extends ElementUIComponent {
+export declare class AElCheckbox extends ElementUIComponent {
   /** The form input value */
   value: string | string[]
 

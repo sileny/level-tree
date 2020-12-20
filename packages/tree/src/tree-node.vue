@@ -1,6 +1,6 @@
 <template>
   <div
-    class="el-tree-node"
+    class="a-el-tree-node"
     @click.stop="handleClick"
     @contextmenu="($event) => this.handleContextMenu($event)"
     v-show="node.visible"
@@ -17,18 +17,18 @@
     @drop.stop="handleDrop"
     ref="node"
   >
-    <div class="el-tree-node__content"
+    <div class="a-el-tree-node__content"
       :style="{ 'padding-left': (node.level - 1) * tree.indent + 'px' }">
       <span
         @click.stop="handleExpandIconClick"
         :class="[
           { 'is-leaf': node.isLeaf, expanded: !node.isLeaf && expanded },
-          'el-tree-node__expand-icon',
-          tree.iconClass ? tree.iconClass : 'el-icon-caret-right'
+          'a-el-tree-node__expand-icon',
+          tree.iconClass ? tree.iconClass : 'a-el-icon-caret-right'
         ]"
       >
       </span>
-      <el-checkbox
+      <a-el-checkbox
         v-if="showCheckbox"
         v-model="node.checked"
         :indeterminate="node.indeterminate"
@@ -36,10 +36,10 @@
         @click.native.stop
         @change="handleCheckChange"
       >
-      </el-checkbox>
+      </a-el-checkbox>
       <span
         v-if="node.loading"
-        class="el-tree-node__loading-icon el-icon-loading">
+        class="a-el-tree-node__loading-icon a-el-icon-loading">
       </span>
       <node-content :node="node"></node-content>
     </div>
@@ -66,15 +66,15 @@
 </template>
 
 <script type="text/jsx">
-  import ElCollapseTransition from 'element-ui/src/transitions/collapse-transition';
-  import ElCheckbox from 'element-ui/packages/checkbox';
+  import AElCollapseTransition from 'element-ui/src/transitions/collapse-transition';
+  import AElCheckbox from 'element-ui/packages/checkbox';
   import emitter from 'element-ui/src/mixins/emitter';
   import { getNodeKey } from './model/util';
 
   export default {
     name: 'AElTreeNode',
 
-    componentName: 'ElTreeNode',
+    componentName: 'AElTreeNode',
 
     mixins: [emitter],
 
@@ -98,8 +98,8 @@
     },
 
     components: {
-      ElCollapseTransition,
-      ElCheckbox,
+      AElCollapseTransition,
+      AElCheckbox,
       NodeContent: {
         props: {
           node: {
@@ -116,7 +116,7 @@
               ? parent.renderContent.call(parent._renderProxy, h, { _self: tree.$vnode.context, node, data, store })
               : tree.$scopedSlots.default
                 ? tree.$scopedSlots.default({ node, data })
-                : <span class="el-tree-node__label">{ node.label }</span>
+                : <span class="a-el-tree-node__label">{ node.label }</span>
           );
         }
       }

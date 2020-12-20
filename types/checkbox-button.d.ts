@@ -1,7 +1,7 @@
 import { ElementUIComponent } from './component'
 
 /** Checkbox Button Component */
-export declare class ElCheckboxButton extends ElementUIComponent {
+export declare class AElCheckboxButton extends ElementUIComponent {
   /** Value of the checkbox when used inside a checkbox-group */
   label: string | number | boolean
 

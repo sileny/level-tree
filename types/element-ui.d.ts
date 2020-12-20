@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import { ElementUIComponent } from './component'
 
-import { ElTree, TreeData } from './tree'
+import { AElTree, TreeData } from './tree'
 
 export interface InstallationOptions {
   locale: any,
@@ -23,4 +23,4 @@ export function install (vue: typeof Vue, options: InstallationOptions): void
 export type Component = ElementUIComponent
 
 /** Tree Component */
-export class Tree<K = any, D = TreeData> extends ElTree<K, D> {}
+export class Tree<K = any, D = TreeData> extends AElTree<K, D> {}

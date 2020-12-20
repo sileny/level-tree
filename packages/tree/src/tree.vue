@@ -1,8 +1,8 @@
 <template>
   <div
-    class="el-tree"
+    class="a-el-tree"
     :class="{
-      'el-tree--highlight-current': highlightCurrent,
+      'a-el-tree--highlight-current': highlightCurrent,
       'is-dragging': !!dragState.draggingNode,
       'is-drop-not-allow': !dragState.allowDrop,
       'is-drop-inner': dragState.dropType === 'inner'
@@ -21,12 +21,12 @@
       :render-content="renderContent"
       @node-expand="handleNodeExpand">
     </a-el-tree-node>
-    <div class="el-tree__empty-block" v-if="isEmpty">
-      <span class="el-tree__empty-text">{{ emptyText }}</span>
+    <div class="a-el-tree__empty-block" v-if="isEmpty">
+      <span class="a-el-tree__empty-text">{{ emptyText }}</span>
     </div>
     <div
       v-show="dragState.showDropIndicator"
-      class="el-tree__drop-indicator"
+      class="a-el-tree__drop-indicator"
       ref="dropIndicator">
     </div>
   </div>
@@ -297,7 +297,7 @@
 
       handleKeydown(ev) {
         const currentItem = ev.target;
-        if (currentItem.className.indexOf('el-tree-node') === -1) return;
+        if (currentItem.className.indexOf('a-el-tree-node') === -1) return;
         const keyCode = ev.keyCode;
         this.treeItems = this.$el.querySelectorAll('.is-focusable[role=treeitem]');
         const currentIndex = this.treeItemArray.indexOf(currentItem);
@@ -427,7 +427,7 @@
           dropType = 'none';
         }
 
-        const iconPosition = dropNode.$el.querySelector('.el-tree-node__expand-icon').getBoundingClientRect();
+        const iconPosition = dropNode.$el.querySelector('.a-el-tree-node__expand-icon').getBoundingClientRect();
         const dropIndicator = this.$refs.dropIndicator;
         if (dropType === 'before') {
           indicatorTop = iconPosition.top - treePosition.top;
