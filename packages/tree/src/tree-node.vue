@@ -252,7 +252,6 @@
     },
 
     created() {
-      console.log(this.inline);
       const parent = this.$parent;
 
       if (parent.isTree) {
