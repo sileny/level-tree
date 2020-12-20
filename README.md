@@ -36,6 +36,8 @@ yarn add @silen/level-tree
 </a-el-tree>
 ```
 
+- `inline`: `Boolean` 类型，最后的每一个节点将会添加 `inline-node` 类名
+- `level`: `Boolean` 类型。为每一级节点都添加上 `level-1/2/3..-node` 类名
 - `data`: `Array<T>` 对象数组
 - `defaultCheckedKeys`: `Array` 类型
 
@@ -47,6 +49,17 @@ export default {
       return [`checkbox-classname1`];
     }
   }
+}
+```
+
+# style
+
+```
+.inline-node { /* inline为true时定义的样式 */
+  display: inline-block;
+}
+.a-el-checkbox__original { /* 不显示原始的checkbox样式 */
+  display: none;
 }
 ```
 
