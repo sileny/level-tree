@@ -1,3 +1,6 @@
 {
+  "checkbox": "./packages/tree/index.js",
+  "checkbox-button": "./packages/tree/index.js",
+  "checkbox-group": "./packages/tree/index.js",
   "tree": "./packages/tree/index.js"
 }

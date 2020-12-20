@@ -1,6 +1,9 @@
 import Vue from 'vue'
 import { ElementUIComponent } from './component'
 
+import { AElCheckbox } from './checkbox'
+import { AElCheckboxButton } from './checkbox-button'
+import { AElCheckboxGroup } from './checkbox-group'
 import { AElTree, TreeData } from './tree'
 
 export interface InstallationOptions {
@@ -24,3 +27,12 @@ export type Component = ElementUIComponent
 
 /** Tree Component */
 export class Tree<K = any, D = TreeData> extends AElTree<K, D> {}
+
+/** Checkbox Component */
+export class Checkbox extends AElCheckbox {}
+
+/** Checkbox Button Component */
+export class CheckboxButton extends AElCheckboxButton {}
+
+/** Checkbox Group Component */
+export class CheckboxGroup extends AElCheckboxGroup {}
